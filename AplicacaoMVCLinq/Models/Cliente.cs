@@ -5,15 +5,17 @@
         public int ClienteId { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public int RM { get; set; }
+        public int Telefone { get; set; }
+        public DateOnly DataNasc { get; set; }
 
 
-        public Cliente(int id, string nome, string email, int rm)
+        public Cliente(int id, string nome, string email, int telefone, DateOnly data)
         {
             this.ClienteId = id;
             this.Nome = nome;
             this.Email = email;
-            this.RM = rm;
+            this.Telefone = telefone;
+            this.DataNasc = data;
         }
     }
 }

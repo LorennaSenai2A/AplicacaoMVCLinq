@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AplicacaoMVCLinq.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AplicacaoMVCLinq.Controllers
 {
     public class ClienteController1 : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public IActionResult GetCliente()
         {
             Cliente c1 = new Cliente(1, "Lorena", "lorena.victor@aluno.senai.br", 121212, new DateOnly(2008, 02, 12));
@@ -15,17 +21,13 @@ namespace AplicacaoMVCLinq.Controllers
             //Criar uma lista de clientes
             List<Cliente> listaClientes = new List<Cliente>();
 
-            listaClientes.Add(a1);
-            listaClientes.Add(a2);
-            listaClientes.Add(a3);
-            listaClientes.Add(a4);
-            listaClientes.Add(a5);
+            listaClientes.Add(c1);
+            listaClientes.Add(c2);
+            listaClientes.Add(c3);
+            listaClientes.Add(c4);
+            listaClientes.Add(c5);
 
             return View(listaClientes);
-        }
-        public IActionResult Cadastrar()
-        {
-            return View();
         }
     }
 }
