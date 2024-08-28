@@ -1,6 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Imagens no Boostrap";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container">
+    <button class="btn btn-outline-primary">teste 1</button>
+    <button class="btn btn-lg btn-success">teste 2</button>
+    <hr class="mt-3" />
+
+    <!-- Imagens Responsiva-->
+    <img class="img-fluid" src="~/img/catboy.jpg" />
+    <hr class="mt-3" />
+    <img class="img-thumbnail" src="~/img/catboy.jpg" width="200" height="300" />
+    <hr class="mt-3" />
+
+    <img class="img-fluid rounded-circle" src="~/img/catboy.jpg" width="500" height="500" />
+    <hr class="mt-3" />
+</div>
